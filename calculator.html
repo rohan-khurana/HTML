@@ -1,0 +1,131 @@
+</!DOCTYPE>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+		function insert(num)
+		{
+			document.form.textview.value=document.form.textview.value+num;
+		}
+		function equal()
+		{
+                var exp = document.form.textview.value
+                if(exp)
+                {
+                    document.form.textview.value = eval(exp)
+                }
+         }
+         function clean()
+         {
+              document.form.textview.value = ""
+
+          }
+          function eveodd()
+          {	var alpha = document.form.textview.value;
+          	if(alpha%2==0)
+          	{
+          	
+          	document.form.textview.value = 'Even';
+
+          	}
+          	else
+          	{
+
+          	document.form.textview.value = 'Odd';
+          		
+          	}
+
+          }
+          function prime()
+          {	var n = document.form.textview.value;
+          	var x=2;
+    		if (n==1)
+  			{
+   				 document.form.textview.value ='Not Prime';
+ 			}
+  			else if(n==2)
+			  {
+  			  document.form.textview.value ='Prime';
+  			}
+  			else
+  			{	for(x=2; x<n; x++)
+  			 	{
+      				if((n%x)==0)
+     				{
+        				document.form.textview.value ='Not Prime';
+        				break;
+      				}
+    			}
+    			document.form.textview.value ='Prime';
+  			}
+    		
+    	}
+
+	</script>
+	<style>
+		.button
+		{
+			height: 70;
+			width: 70;
+			font-size: 30;
+			margin:2;
+			border-radius: 8px;
+			color: black;
+
+		}
+		.textview
+		{
+			height:50;
+			font-size: 25;
+			margin: 2
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="main">
+	<div class="container-fluid">
+	<h1> Calculator</h1>
+	<form name="form">
+		<input class="textview" name="textview" id="testv">
+	</form>
+	<table>
+		<tr>
+			<td><input class="button" type="button" value="C" onclick="clean()"></td>
+			<td><input class="button" type="button" value="%" onclick="insert('%')"></td>
+			<td><input class="button" type="button" value="/"onclick="insert('/')"></td>
+			<td><input class="button" type="button" value="P"onclick="prime()"></td>
+			
+		</tr>
+		<tr>
+			<td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+			<td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+			<td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+			<td><input class="button" type="button" value="*"onclick="insert('*')"></td>
+		</tr>
+		<tr>
+			<td><input class="button" type="button" value="4"onclick="insert(4)"></td>
+			<td><input class="button" type="button" value="5"onclick="insert(5)"></td>
+			<td><input class="button" type="button" value="6"onclick="insert(6)"></td>
+			<td><input class="button" type="button" value="-"onclick="insert('-')"></td>
+		</tr>
+		<tr>
+			<td><input class="button" type="button" value="7"onclick="insert(7)"></td>
+			<td><input class="button" type="button" value="8"onclick="insert(8)"></td>
+			<td><input class="button" type="button" value="9"onclick="insert(9)"></td>
+			<td><input class="button" type="button" value="+"onclick="insert('+')"></td>
+			
+		</tr>
+		<tr>
+			<td><input class="button" type="button" value="0"onclick="insert(0)"></td>
+			<td><input class="button" type="button" value="."onclick="insert('.')"></td>
+			<td><input class="button" type="button" value="n"onclick="eveodd()"></td>
+			<td><input class="button" type="button" value="="onclick="equal()"></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
