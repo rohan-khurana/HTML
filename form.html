@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Form </title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+		function validationform()
+		{
+			var full =document.getElementById("fname").value;
+			var last=document.getElementById("lname").value;
+			var roll=document.getElementById("roll").value;
+			var x=roll.length;
+			if(full=="")
+			{
+				alert("Enter First Name");
+
+			}
+			if(last=="")
+			{
+				alert("Enter Last Name");
+
+			}
+			
+
+			if(x!=10)
+			{
+				alert("Enter the correct Roll Number");
+			}
+
+
+
+		}
+	</script>
+	<style>
+		.texts{
+			text-align: Left;
+			color: white;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="bg-dark">
+		<br>
+	<h2 style="color:white; text-align: center"> Student Form </h2>
+	<br>
+	<form>
+	<div style="align-content: center;padding: 2">
+	<div class="texts">
+		<div class="row">
+			<div class="col-2"> First Name: </div>
+			<input id="fname" class="col-8" type="text" placeholder="First Name"><br>
+		</div>
+		<div class="row">
+			<div class="col-2">Last Name:</div>
+			<input id="lname" class="col-8" type="text" placeholder="Last Name"><br>
+		</div>
+		<div class="row">
+			<div class="col-2">Roll No.: </div>
+			<input class="col-8" id="roll" type="number" placeholder="Roll No."><br>
+		</div>
+		<div class="row">
+			<div class="col-2">Email:</div> 
+			<input class="col-8" type="email" placeholder="@mail.com" name="Email"><br>
+		</div>
+		<div class="row">
+			<div class="col-2">Gender:</div> 
+			<div class="col-2"><input type="radio" name="Gender">Male</div>
+			<div class="col-2"><input type="radio" name="Gender">Female<br></div>
+		</div>
+		<div class="row">
+			<div class="col-2">DOB:</div>
+			<input class="col-2" type="date" name="DOB"><br>
+		</div>
+		</div class="row">
+			<div class="col-2 texts">Branch:</div>
+				<select>
+					<option value="CSE">Computer Science and Engineering</option>
+					<option value="IT">Information Technology</option>
+					<option value="ME">Mechanical Engineering</option>
+					<option value="ECE">Electronics and Communication Engineering</option>
+					<option value="EN">Electrical and Electronics Engineering</option>
+					<option value="CE">Civil Engineering</option>
+				</select>
+		</div>
+		<input type="checkbox" name="agree"><p style="color:white">I have given all the information correctly and agrees to submit the form.</p><br>
+		<input type="submit" value="submit" onclick="validationform()">
+		</div>
+	</div>
+	</form>
+	</div>
+	<br>
+</body>
+</html>
